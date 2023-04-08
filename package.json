@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
+    "axios": "^1.3.5",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "http-status-codes": "^2.2.0",
     "roboto-fontface": "*",
     "swagger-ui-express": "^4.6.2",
     "vue": "^3.2.38",
+    "vue-router": "^4.1.6",
     "vuetify": "^3.0.0",
     "webfontloader": "^1.0.0"
   },
