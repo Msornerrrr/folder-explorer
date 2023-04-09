@@ -77,7 +77,8 @@ app.get("/folders/:folder", checkSubFolder, async (req, res) => {
 
 app.get("/folders/:folder/:pdf", checkSubFolder, checkPdf, (req, res) => {
   const pdfPath = path.join(baseDir, req.params.folder, req.params.pdf);
-  res.sendFile(pdfPath);
+  // res.sendFile(pdfPath);
+  res.download(pdfPath);
 });
 
 // use swagger

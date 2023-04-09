@@ -6,15 +6,16 @@ import { ref } from 'vue';
 
 const route = useRoute();
 const baseUrl = "http://localhost:8080";
-const relativeUrl = `/folders/${route.params.sub}`;
+const relativeUrl = route.path;
 
 const url = ref(baseUrl + relativeUrl);
 const { data, error } = useFetch(url.value);
+
 </script>
 
 <template>
   <ListWrapper v-if="data" :data-list="data" v-slot="{ index }">
-    <router-link :to="`${relativeUrl}/${data[index - 1]}`" class="linkless">
+    <router-link :to="`${relativeUrl}/${data[index - 1].slice(0, -4)}`" class="linkless">
       <v-img class="file-icon" src="../assets/pdf.png" alt="pdf image" />
       <p class="subtitle">{{ data[index - 1] }}</p>
     </router-link>
