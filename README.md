@@ -2,9 +2,10 @@
 Use the following guideline to run this program on local machine
 - clone the repo to your local machine
 - open folder-explorer folder
-- use `npm run server` to start the server
+- run `npm install` to install all the dependencies
+- run `npm run server` to start the server
 - start a new terminal
-- use `npm run dev` to start the client on the new terminal
+- run `npm run dev` to start the client on the new terminal
 - then navigate to [localhost:3000](http://localhost:3000/) in the broswer
 
 ## To Run Swagger
