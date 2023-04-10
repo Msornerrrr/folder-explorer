@@ -72,16 +72,7 @@ const prevPage = () => {
     </v-row>
 
     <v-row justify="center">
-      <canvas ref="canvas" class="canvas"></canvas>
+      <canvas ref="canvas" style="border: 1px solid black;"></canvas>
     </v-row>
   </v-container>
 </template>
-
-<style>
-.canvas {
-  border: 1px solid black;
-}
-.slider {
-  width: 50px;
-}
-</style>

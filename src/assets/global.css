@@ -12,3 +12,9 @@
 .linkless:hover {
   text-decoration: underline;
 }
+
+.file-subtitle {
+  text-align: center;
+  font-size: large;
+  word-wrap: break-word;
+}

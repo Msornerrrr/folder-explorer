@@ -9,7 +9,7 @@ watch(route, () => {
   const params = route.path.split('/');
   params.shift()
 
-  const newItems = [{ title: "APP" }];
+  const newItems = [{ title: "APP", to: '/' }];
   let link = "";
   for (const param of params) {
     link += '/' + param
@@ -33,4 +33,3 @@ watch(route, () => {
     </template>
   </v-breadcrumbs>
 </template>
-

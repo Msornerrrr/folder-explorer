@@ -15,23 +15,16 @@ const { data, error } = useFetch(url.value);
 
 <template>
   <ListWrapper v-if="data" :data-list="data" v-slot="{ index }">
-    <router-link :to="`${relativeUrl}/${data[index - 1].slice(0, -4)}`" class="linkless">
+    <RouterLink :to="`${relativeUrl}/${data[index - 1].slice(0, -4)}`" class="linkless">
       <v-img class="file-icon" src="../assets/pdf.png" alt="pdf image" />
-      <p class="subtitle">{{ data[index - 1] }}</p>
-    </router-link>
+      <p class="file-subtitle">{{ data[index - 1] }}</p>
+    </RouterLink>
   </ListWrapper>
-  <!-- Only for long loading time -->
-  <!-- <p v-else>loading</p> -->
 </template>
 
 <style scoped>
 .file-icon {
   width: 100px;
   margin: 0 auto 5px;
-}
-
-.subtitle {
-  text-align: center;
-  font-size: large;
 }
 </style>
