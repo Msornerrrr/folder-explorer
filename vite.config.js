@@ -1,7 +1,7 @@
 // Plugins
 import vue from '@vitejs/plugin-vue'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
-// import path from 'path';
+import path from 'path';
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -33,14 +33,14 @@ export default defineConfig({
       '.vue',
     ],
   },
-  // build: {
-  //   outDir: path.resolve(__dirname, './server/public')
-  // },
+  build: {
+    outDir: path.resolve(__dirname, './server/public')
+  },
   server: {
     port: 3000,
     proxy: {
       '/api': {
-        target: 'http://localhost:8080',
+        target: 'https://folder-explorer.herokuapp.com',
         changeOrigin: true
       }
     }

@@ -84,14 +84,14 @@ app.get("/api/folders/:folder/:pdf", checkSubFolder, checkPdf, (req, res) => {
 // use swagger
 // app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile, { explorer: true, }));
 
-// // handle production
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static(__dirname + '/public/'));
+// handle production
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(__dirname + '/public/'));
 
-//   app.get(/.*/, (req, res) => {
-//     res.sendFile(__dirname + '/public/index.html');
-//   });
-// }
+  app.get(/.*/, (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+  });
+}
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`))

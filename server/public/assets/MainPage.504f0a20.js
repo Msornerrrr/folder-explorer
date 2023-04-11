@@ -1,0 +1,1 @@
+import{u as o,o as t,c as s,a as n}from"./index.1d37784f.js";import{_}from"./_plugin-vue_export-helper.cdc0426e.js";const r={__name:"MainPage",setup(p){const a=o();return(c,e)=>(t(),s("div",{class:"round-btn",onClick:e[0]||(e[0]=u=>n(a).push({path:"folders"}))}," Open Folder "))}},i=_(r,[["__scopeId","data-v-92a0133e"]]);export{i as default};
