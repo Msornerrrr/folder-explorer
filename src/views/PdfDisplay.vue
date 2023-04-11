@@ -4,8 +4,6 @@ import { ref, onMounted, toRaw } from 'vue';
 import * as pdfjs from 'pdfjs-dist';
 
 const route = useRoute();
-const baseUrl = "http://localhost:8080";
-const relativeUrl = route.path;
 
 const pdfDoc = ref(null);
 const pageNum = ref(1);
@@ -15,7 +13,7 @@ const scale = ref(1.5);
 
 onMounted(() => {
   pdfjs.GlobalWorkerOptions.workerSrc = '../../node_modules/pdfjs-dist/build/pdf.worker.js';
-  pdfjs.getDocument(baseUrl + relativeUrl + '.pdf').promise.then(pdfDoc_ => {
+  pdfjs.getDocument('/api' + route.path + '.pdf').promise.then(pdfDoc_ => {
     pdfDoc.value = pdfDoc_;
     pageNum.value = 1;
     totalNum.value = pdfDoc_.numPages;

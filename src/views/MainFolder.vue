@@ -1,11 +1,8 @@
 <script setup>
 import ListWrapper from '../components/ListWrapper.vue';
 import { useFetch } from '../hooks/fetch';
-import { ref } from 'vue';
 
-const baseUrl = "http://localhost:8080";
-const url = ref(`${baseUrl}/folders`);
-const { data, error } = useFetch(url.value);
+const { data, error } = useFetch('/api/folders');
 </script>
 
 <template>
